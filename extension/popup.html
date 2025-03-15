@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      padding: 15px;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+      display: none;
+    }
+    .active {
+      background-color: #e6f4ea;
+      color: #137333;
+      display: block;
+    }
+    .inactive {
+      background-color: #f8f9fa;
+      color: #5f6368;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sleep Time Show Stopper</h1>
+  
+  <div class="form-group">
+    <label for="hours">Hours:</label>
+    <input type="number" id="hours" min="0" max="24" value="2" step="1">
+  </div>
+  
+  <div class="form-group">
+    <label for="minutes">Minutes:</label>
+    <input type="number" id="minutes" min="0" max="59" value="0" step="1">
+  </div>
+  
+  <button id="startTimer">Start Timer</button>
+  <button id="cancelTimer" style="display: none; background-color: #ea4335;">Cancel Timer</button>
+  
+  <div id="status" class="status">
+    Timer not active
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
