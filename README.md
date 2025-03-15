@@ -114,7 +114,3 @@ The **Simple Video Pauser** Chrome extension (in the `simple_video_pauser` direc
 │   ├── content.js
 │   └── images
 ```
-
-## License
-
-MIT License
