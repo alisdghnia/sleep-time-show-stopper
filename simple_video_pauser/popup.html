@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 250px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+    .checkbox-group {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+    }
+    .checkbox-label input {
+      width: auto;
+      margin-right: 8px;
+    }
+    .section-title {
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 8px;
+      border-top: 1px solid #eee;
+      padding-top: 8px;
+    }
+    #status {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .active {
+      color: green;
+    }
+    #screenshots {
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      border-top: 1px solid #eee;
+      padding-top: 8px;
+    }
+    .screenshot-item {
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .screenshot-item button {
+      width: auto;
+      padding: 3px 8px;
+      font-size: 12px;
+      margin: 0 0 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Simple Video Pauser</h2>
+  
+  <div class="input-group">
+    <label for="minutes">Minutes until pause:</label>
+    <input type="number" id="minutes" min="1" value="10">
+  </div>
+  
+  <div class="checkbox-group">
+    <label class="checkbox-label">
+      <input type="checkbox" id="takeScreenshot" checked>
+      Take screenshot when pausing
+    </label>
+  </div>
+  
+  <div class="checkbox-group">
+    <label class="checkbox-label">
+      <input type="checkbox" id="captureFullPage">
+      Capture full page (not just viewport)
+    </label>
+  </div>
+  
+  <button id="startTimer">Start Timer</button>
+  <button id="cancelTimer" style="display: none; background-color: #ea4335;">Cancel Timer</button>
+  
+  <div id="status"></div>
+  
+  <div class="section-title">Manual Screenshot</div>
+  <button id="takeManualScreenshot">Take Screenshot Now</button>
+  
+  <div class="section-title">Recent Screenshots</div>
+  <div id="screenshots">
+    <div class="empty-state">No screenshots taken yet</div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
